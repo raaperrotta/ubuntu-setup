@@ -8,6 +8,7 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 sed -i "s+robbyrussell+powerlevel10k/powerlevel10k+g" .zshrc
 
 curl https://getmic.ro | bash
+sudo mv micro /usr/local/bin/
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 bash ~/miniconda.sh -b -p $HOME/miniconda
