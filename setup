@@ -1,0 +1,16 @@
+sudo apt-get update
+sudo apt-get install git, zsh, fonts-powerline
+
+sudo chsh -s /usr/bin/zsh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+sed -i "s+robbyrussell+powerlevel10k/powerlevel10k+g" .zshrc
+
+curl https://getmic.ro | bash
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
+conda init zsh
+
+p10k configre
