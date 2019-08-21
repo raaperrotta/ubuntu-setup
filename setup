@@ -1,5 +1,6 @@
 sudo apt-get update
-sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag ttf-inconsolata ttf-droid ttf-dejavu
+sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag thefuck
+thefuck --alias oops | bash
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
