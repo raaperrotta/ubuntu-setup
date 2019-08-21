@@ -1,15 +1,15 @@
 sudo apt-get update
-sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag thefuck
+sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag thefuck -y
 thefuck --alias oops | bash
-
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
 
 sudo chsh -s /usr/bin/zsh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-sed -i "s+robbyrussell+powerlevel10k/powerlevel10k+g" .zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/p10k
+sed -i "s+robbyrussell+p10k/powerlevel10k+g" .zshrc
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
 
 curl https://getmic.ro | bash
 sudo mv micro /usr/local/bin/
@@ -20,4 +20,4 @@ conda init zsh
 
 sudo apt autoremove
 
-p10k configre
+zsh
