@@ -1,12 +1,12 @@
 sudo apt-get update
-sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag thefuck -y
+sudo apt-get install git zsh fonts-powerline ncdu docker.io curl aria2 pydf mtr htop ack-grep silversearcher-ag thefuck tree -y
 thefuck --alias oops | bash
 
 sudo chsh -s /usr/bin/zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/p10k
-sed -i "s+robbyrussell+p10k/powerlevel10k+g" .zshrc
+sed -i "s+robbyrussell+p10k/powerlevel10k+g" ~/.zshrc
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
@@ -15,7 +15,7 @@ curl https://getmic.ro | bash
 sudo mv micro /usr/local/bin/
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh -b -p $HOME/miniconda
+bash ~/miniconda.sh -b -p $HOME/miniconda3
 rm ~/miniconda.sh
 $HOME/miniconda/bin/conda init zsh
 
