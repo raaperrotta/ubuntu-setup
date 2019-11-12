@@ -21,4 +21,7 @@ $HOME/miniconda/bin/conda init zsh
 
 sudo apt autoremove
 
+# Have git cache username and password for 15 minutes when connecting to remote over https
+git config --global credential.helper cache
+
 zsh
