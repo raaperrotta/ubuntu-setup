@@ -11,6 +11,9 @@ sed -i "s+robbyrussell+p10k/powerlevel10k+g" ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+sed -i "s+plugins=(git)+plugins=(git zsh-syntax-highlighting)+g" ~/.zshrc
+
 curl https://getmic.ro | bash
 sudo mv micro /usr/local/bin/
 
